@@ -26,11 +26,28 @@ def min_operations(list_str , len_of_list_str):
             
                 for value in dic_count:
                     if half_lenght == dic_count[value]:
-                        return opreation_count+1 
+                        return opreation_count+1
+         
 
 string ='zewmyde'
 list_str = list(string)
 len_of_list_str = len(list_str)
 print( min_operations( list_str , len_of_list_str ) ) 
+
+
+def min_operations_2(str): 
+    half_length = str(len)//2
+    dict_count = {}
+    for ch in str:
+        if ch in dict_count:
+            dict_count[ch] +=1
+        else :
+            dict_count[ch]=1
+     
+    max_count_from_dict = get_max_from_dict(dict_count)
+    if max_count_from_dict>=half_length:
+        return 0
+
+     
 
         
